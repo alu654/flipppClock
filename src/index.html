@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <div class="moon" id="theme-toggle">🌙</div>
+        <input type="range" id="size-slider" min="50" max="200" value="100">
+    </div>
+    <div id="flip-clock" class="flip-clock">
+        <div class="flip-card" id="hours">
+            <div class="top" id="hours-top">00</div>
+            <div class="bottom" id="hours-bottom">00</div>
+            <div class="flip" id="hours-flip"></div>
+        </div>
+        <div class="flip-card" id="minutes">
+            <div class="top" id="minutes-top">00</div>
+            <div class="bottom" id="minutes-bottom">00</div>
+            <div class="flip" id="minutes-flip"></div>
+        </div>
+        <div class="flip-card" id="seconds">
+            <div class="top" id="seconds-top">00</div>
+            <div class="bottom" id="seconds-bottom">00</div>
+            <div class="flip" id="seconds-flip"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

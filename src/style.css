@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.light {
+    background: #fff;
+    color: #000;
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.moon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flip-clock {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s;
+}
+
+.flip-card {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+}
+
+.top, .bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    backface-visibility: hidden;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border-radius: 5px;
+}
+
+body.light .top, body.light .bottom {
+    background: #ddd;
+}
+
+.top {
+    border-bottom: 2px solid #000;
+}
+
+.bottom {
+    top: 50%;
+    border-top: 2px solid #000;
+    transform: rotateX(180deg);
+}
+
+.flip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+body.light .flip {
+    background: #ddd;
+}
+
+.flip.flip-top {
+    animation: flipTop 0.5s linear forwards;
+}
+
+.flip.flip-bottom {
+    animation: flipBottom 0.5s linear forwards;
+}
+
+@keyframes flipTop {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(-180deg);
+    }
+}
+
+@keyframes flipBottom {
+    0% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}
