@@ -1,12 +1,12 @@
 {
   "name": "flipclock",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server src"
+    "start": "echo 'Error: no start script specified' && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
